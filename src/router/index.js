@@ -34,6 +34,16 @@ const routes = [
     name: 'eng-admin',
     component: EngAdminApp,
     children: [
+      {
+        path: 'add-administrator-eng',
+        name: 'add-administrator-eng',
+        component: () => import('@/components/EngAdmin/AddAdmin.vue')
+      },
+      {
+        path: 'generate-password-eng',
+        name: 'generate-password-eng',
+        component: () => import('@/components/EngAdmin/GeneratePassword.vue')
+      },
       // This is For Communication Engineering
       {
         path: 'communication-eng-showStudents1',
@@ -184,6 +194,93 @@ const routes = [
     path: '/info-admin',
     name: 'info-admin',
     component: InfoAdminApp,
+    children: [
+      {
+        path: 'add-administrator-info',
+        name: 'add-administrator-info',
+        component: () => import('@/components/InfoAdmin/AddAdmin.vue')
+      },
+      {
+        path: 'generate-password-info',
+        name: 'generate-password-info',
+        component: () => import('@/components/InfoAdmin/GeneratePassword.vue')
+      },
+      // This Is For Network
+      {
+        path: 'network-showStudents1',
+        name: 'network-showStudents1',
+        component: () =>
+          import('@/components/InfoAdmin/NetworkInfo/ShowStudents1.vue')
+      },
+      {
+        path: 'network-showStudents2',
+        name: 'network-showStudents2',
+        component: () =>
+          import('@/components/InfoAdmin/NetworkInfo/ShowStudents2.vue')
+      },
+      {
+        path: 'network-showStudents3',
+        name: 'network-showStudents3',
+        component: () =>
+          import('@/components/InfoAdmin/NetworkInfo/ShowStudents3.vue')
+      },
+      {
+        path: 'network-showStudents4',
+        name: 'network-showStudents4',
+        component: () =>
+          import('@/components/InfoAdmin/NetworkInfo/ShowStudents4.vue')
+      },
+      // This Is For Database
+      {
+        path: 'database-showStudents1',
+        name: 'database-showStudents1',
+        component: () =>
+          import('@/components/InfoAdmin/DatabaseInfo/ShowStudents1.vue')
+      },
+      {
+        path: 'database-showStudents2',
+        name: 'database-showStudents2',
+        component: () =>
+          import('@/components/InfoAdmin/DatabaseInfo/ShowStudents2.vue')
+      },
+      {
+        path: 'database-showStudents3',
+        name: 'database-showStudents3',
+        component: () =>
+          import('@/components/InfoAdmin/DatabaseInfo/ShowStudents3.vue')
+      },
+      {
+        path: 'database-showStudents4',
+        name: 'database-showStudents4',
+        component: () =>
+          import('@/components/InfoAdmin/DatabaseInfo/ShowStudents4.vue')
+      },
+      // This Is For Information
+      {
+        path: 'information-showStudents1',
+        name: 'information-showStudents1',
+        component: () =>
+          import('@/components/InfoAdmin/InformationInfo/ShowStudents1.vue')
+      },
+      {
+        path: 'information-showStudents2',
+        name: 'information-showStudents2',
+        component: () =>
+          import('@/components/InfoAdmin/InformationInfo/ShowStudents2.vue')
+      },
+      {
+        path: 'information-showStudents3',
+        name: 'information-showStudents3',
+        component: () =>
+          import('@/components/InfoAdmin/InformationInfo/ShowStudents3.vue')
+      },
+      {
+        path: 'information-showStudents4',
+        name: 'information-showStudents4',
+        component: () =>
+          import('@/components/InfoAdmin/InformationInfo/ShowStudents4.vue')
+      }
+    ],
     beforeEnter: (to, from, next) => {
       if (JSON.parse(localStorage.getItem('loggedInForInfo')) === false) {
         next({ name: 'Home' })

@@ -70,11 +70,6 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-12">
-                <generatePassword />
-              </div>
-            </div>
             <form>
               <div class="form-group">
                 <label for="title">UserName</label>
@@ -273,8 +268,11 @@
           <div class="modal-body">
             <p class="lead">Are you sure you want to delete this</p>
             <div class="row">
-              <!-- @click="deleteData" -->
-              <button data-dismiss="modal" class="btn deleteStudent mr-3">
+              <button
+                @click="deleteData"
+                data-dismiss="modal"
+                class="btn deleteStudent mr-3"
+              >
                 Delete
               </button>
               <button data-dismiss="modal" class="btn cancelDeleting">
@@ -290,17 +288,13 @@
 </template>
 
 <script>
-import generatePassword from '@/components/EngAdmin/GeneratePassword'
 export default {
-  components: {
-    generatePassword
-  },
   data() {
     return {
       addStudent: {
         username: null,
         password: null,
-        department: ' City Planning',
+        department: ' Information',
         year: null,
         mobileNumber: null,
         stage: '1'

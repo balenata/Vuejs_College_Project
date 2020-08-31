@@ -1,11 +1,24 @@
 <template>
-  <div>
-      <h1>hello</h1>
+  <div id="app">
+    <navbar />
+    <!-- <sidenav /> -->
+    <router-view />
   </div>
 </template>
 
 <script>
-export default {}
+import navbar from './InfoNavbar.vue'
+// import sidenav from './EngSideNav.vue'
+export default {
+  components: {
+    navbar
+    // sidenav
+  }
+}
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+#app {
+  overflow-x: hidden;
+}
+</style>

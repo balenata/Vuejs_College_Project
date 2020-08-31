@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class=" navbar navbar-expand bg-dark">
-      <a class="navbar-brand text-white" href="#">Start Bootstrap</a>
+      <a class="navbar-brand text-white" href="#">Informatics</a>
       <!-- Navbar Search-->
       <div class="col-md-5 ml-auto">
         <form >
@@ -30,7 +30,7 @@
             <font-awesome-icon class="text-white" icon="user" />
           </a>
           <div class="dropdown-menu dropdown-menu-right ">
-            <router-link class="dropdown-item" to="/eng-admin/add-administrator-eng">Settings </router-link>
+            <router-link class="dropdown-item" to="/info-admin/add-administrator-info">Settings </router-link>
             <a class="dropdown-item" href="#">Activity Log</a>
             <div class="dropdown-divider"></div>
             <router-link class="dropdown-item" to="/admin">Logout </router-link>
@@ -38,15 +38,15 @@
         </li>
       </ul>
     </nav>
-    <sidenav />
+    <sidenavinfo />
   </div>
 </template>
 
 <script>
-import sidenav from './EngSideNav.vue'
+import sidenavinfo from './InfoSideNav.vue'
 export default {
   components: {
-    sidenav
+    sidenavinfo
   }
 }
 </script>

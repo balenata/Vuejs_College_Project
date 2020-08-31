@@ -34,7 +34,9 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
     "lint-staged": "^9.5.0",
-    "sass-loader": "^9.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3",
+    "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {

@@ -36,7 +36,7 @@
       <tr class="border">
         <th scope="row">1</th>
         <td>this is image</td>
-        <td>city1</td>
+        <td>elec2</td>
         <td>123fsafsdfs</td>
         <td>Communication</td>
         <td>4</td>
@@ -70,11 +70,6 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="row">
-              <div class="col-md-12">
-                <generatePassword />
-              </div>
-            </div>
             <form>
               <div class="form-group">
                 <label for="title">UserName</label>
@@ -273,8 +268,11 @@
           <div class="modal-body">
             <p class="lead">Are you sure you want to delete this</p>
             <div class="row">
-              <!-- @click="deleteData" -->
-              <button data-dismiss="modal" class="btn deleteStudent mr-3">
+              <button
+                @click="deleteData"
+                data-dismiss="modal"
+                class="btn deleteStudent mr-3"
+              >
                 Delete
               </button>
               <button data-dismiss="modal" class="btn cancelDeleting">
@@ -290,20 +288,16 @@
 </template>
 
 <script>
-import generatePassword from '@/components/EngAdmin/GeneratePassword'
 export default {
-  components: {
-    generatePassword
-  },
   data() {
     return {
       addStudent: {
         username: null,
         password: null,
-        department: ' City Planning',
+        department: 'Database',
         year: null,
         mobileNumber: null,
-        stage: '1'
+        stage: '2'
       },
       image:
         'https://www.allianzhost.com/wp-content/themes/arkahost/assets/images/default.png'

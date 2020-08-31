@@ -1,19 +1,18 @@
 <template>
   <div id="app">
     <navbar />
-
-    <sidenav />
+    <!-- <sidenav /> -->
     <router-view />
   </div>
 </template>
 
 <script>
 import navbar from './EngNavbar.vue'
-import sidenav from './EngSideNav.vue'
+// import sidenav from './EngSideNav.vue'
 export default {
   components: {
-    navbar,
-    sidenav
+    navbar
+    // sidenav
   }
 }
 </script>

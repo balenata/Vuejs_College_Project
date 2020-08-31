@@ -70,13 +70,13 @@
         </li>
       </ul>
     </div>
-    <!-- <router-link
+    <router-link
       style="margin-left:35%;margin-top:60px;"
       class="btn btn-primary"
-      to="/eng-admin/generate-password-eng"
+      to="/info-admin/generate-password-info"
     >
       Generate password</router-link
-    > -->
+    >
   </div>
 </template>
 
@@ -92,69 +92,43 @@ export default {
       whatching: false,
       loops: [
         {
-          name: 'Communication',
+          name: 'Database',
           toggle: false,
-          icon: 'broadcast-tower',
+          icon: 'database',
           whatching: false,
           whatching0: false,
           whatching1: false,
           whatching2: false,
-          router1: '/eng-admin/communication-eng-showStudents1',
-          router2: '/eng-admin/communication-eng-showStudents2',
-          router3: '/eng-admin/communication-eng-showStudents3',
-          router4: '/eng-admin/communication-eng-showStudents4'
+          router1: '/info-admin/database-showStudents1',
+          router2: '/info-admin/database-showStudents2',
+          router3: '/info-admin/database-showStudents3',
+          router4: '/info-admin/database-showStudents4'
         },
         {
-          name: 'Mechanical',
+          name: 'Network',
           toggle: false,
-          icon: 'cogs',
+          icon: 'network-wired',
           whatching: false,
           whatching0: false,
           whatching1: false,
           whatching2: false,
-          router1: '/eng-admin/mechanical-eng-showStudents1',
-          router2: '/eng-admin/mechanical-eng-showStudents2',
-          router3: '/eng-admin/mechanical-eng-showStudents3',
-          router4: '/eng-admin/mechanical-eng-showStudents4'
+          router1: '/info-admin/network-showStudents1',
+          router2: '/info-admin/network-showStudents2',
+          router3: '/info-admin/network-showStudents3',
+          router4: '/info-admin/network-showStudents4'
         },
         {
-          name: 'Oil and Energy',
+          name: 'Information',
           toggle: false,
-          icon: 'gas-pump',
+          icon: 'info',
           whatching: false,
           whatching0: false,
           whatching1: false,
           whatching2: false,
-          router1: '/eng-admin/oil-and-energy-eng-showStudents1',
-          router2: '/eng-admin/oil-and-energy-eng-showStudents2',
-          router3: '/eng-admin/oil-and-energy-eng-showStudents3',
-          router4: '/eng-admin/oil-and-energy-eng-showStudents4'
-        },
-        {
-          name: 'Electrical',
-          toggle: false,
-          icon: 'lightbulb',
-          whatching: false,
-          whatching0: false,
-          whatching1: false,
-          whatching2: false,
-          router1: '/eng-admin/electrical-showStudents1',
-          router2: '/eng-admin/electrical-showStudents2',
-          router3: '/eng-admin/electrical-showStudents3',
-          router4: '/eng-admin/electrical-showStudents4'
-        },
-        {
-          name: 'City Planning',
-          toggle: false,
-          icon: 'city',
-          whatching: false,
-          whatching0: false,
-          whatching1: false,
-          whatching2: false,
-          router1: '/eng-admin/city-planning-showStudents1',
-          router2: '/eng-admin/city-planning-showStudents2',
-          router3: '/eng-admin/city-planning-showStudents3',
-          router4: '/eng-admin/city-planning-showStudents4'
+          router1: '/info-admin/information-showStudents1',
+          router2: '/info-admin/information-showStudents2',
+          router3: '/info-admin/information-showStudents3',
+          router4: '/info-admin/information-showStudents4'
         }
       ]
     }
