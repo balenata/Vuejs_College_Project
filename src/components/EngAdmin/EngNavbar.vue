@@ -38,7 +38,9 @@
         </li>
       </ul>
     </nav>
+    <div class="col-md-3">
     <sidenav />
+    </div>
   </div>
 </template>
 

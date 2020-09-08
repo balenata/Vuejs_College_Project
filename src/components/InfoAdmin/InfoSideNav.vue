@@ -70,13 +70,6 @@
         </li>
       </ul>
     </div>
-    <router-link
-      style="margin-left:35%;margin-top:60px;"
-      class="btn btn-primary"
-      to="/info-admin/generate-password-info"
-    >
-      Generate password</router-link
-    >
   </div>
 </template>
 

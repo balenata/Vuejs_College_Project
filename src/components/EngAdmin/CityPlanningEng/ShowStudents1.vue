@@ -75,8 +75,8 @@
                 <generatePassword />
               </div>
             </div>
-            <form>
-              <div class="form-group">
+            <form class="row">
+              <div class="form-group col-md-6">
                 <label for="title">UserName</label>
                 <input
                   type="text"
@@ -84,7 +84,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Password</label>
                 <input
                   type="text"
@@ -92,7 +92,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Department</label>
                 <input
                   type="text"
@@ -100,7 +100,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Stage</label>
                 <input
                   type="text"
@@ -108,7 +108,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Year</label>
                 <input
                   type="text"
@@ -116,7 +116,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">MobileNumber</label>
                 <input
                   type="text"
@@ -124,7 +124,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label>Choose Photo:</label>
                 <br />
                 <img
@@ -153,7 +153,7 @@
                     : true
                 "
                 type="submit"
-                class="btn saveStudent"
+                class="btn saveStudent col-md-12"
               >
                 Save Student
               </button>
@@ -174,7 +174,7 @@
           </div>
           <div class="modal-body">
             <form>
-              <div class="form-group">
+              <div class="form-group ">
                 <label for="title">UserName</label>
                 <input
                   type="text"

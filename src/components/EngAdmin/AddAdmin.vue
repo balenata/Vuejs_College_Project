@@ -1,14 +1,12 @@
 <template>
   <div>
-    <form
-      style="margin-left:25%;margin-top:50px;"
-      @submit.prevent="fornownothing"
-    >
-      <div class="form-group">
+    <!-- @submit.prevent="fornownothing" -->
+    <form style="margin-left:45%;margin-top:50px;">
+      <div class="form-group w-50">
         <label for="exampleFormControlInput1">Username</label>
         <input type="name" class="form-control" placeholder="Enter name" />
       </div>
-      <div class="form-group">
+      <div class="form-group w-50">
         <label for="exampleFormControlInput1">Password</label>
         <input
           type="password"
@@ -16,17 +14,20 @@
           placeholder="Enter password"
         />
       </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+      <div class="form-group w-50">
+        <label for="multiple_select">select status</label>
+        <select
+          name="multiple_select"
+          id="multiple_select"
+          class="form-control selectpicker"
+          multiple
+        >
+          <option v-for="p in allPermissions" :key="p.id" :value="p.id">
+            {{ p.codename.replace('_', ' ') }}
+          </option>
         </select>
       </div>
-      <div class="form-group">
+      <div class="form-group w-50">
         <label for="exampleFormControlInput1">Passcode</label>
         <input
           type="password"
@@ -43,12 +44,22 @@
 </template>
 
 <script>
+import Axios from 'axios'
+
 export default {
+  mounted() {
+    Axios.get('get_permissions/').then(response => {
+      this.allPermissions = response.data
+    })
+  },
+
   data() {
     return {
+      allPermissions: [],
       passcode: ''
     }
   },
+
   computed: {
     isDisabled() {
       return this.passcode !== 'balenata'

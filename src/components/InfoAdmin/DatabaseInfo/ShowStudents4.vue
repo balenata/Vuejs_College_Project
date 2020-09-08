@@ -70,8 +70,13 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
-              <div class="form-group">
+            <div class="row">
+              <div class="col-md-12">
+                <generatePassword />
+              </div>
+            </div>
+            <form class="row">
+              <div class="form-group col-md-6">
                 <label for="title">UserName</label>
                 <input
                   type="text"
@@ -79,7 +84,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Password</label>
                 <input
                   type="text"
@@ -87,7 +92,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Department</label>
                 <input
                   type="text"
@@ -95,7 +100,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Stage</label>
                 <input
                   type="text"
@@ -103,7 +108,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">Year</label>
                 <input
                   type="text"
@@ -111,7 +116,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label for="title">MobileNumber</label>
                 <input
                   type="text"
@@ -119,7 +124,7 @@
                   class="form-control"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group col-md-6">
                 <label>Choose Photo:</label>
                 <br />
                 <img
@@ -148,7 +153,7 @@
                     : true
                 "
                 type="submit"
-                class="btn saveStudent"
+                class="btn saveStudent col-md-12"
               >
                 Save Student
               </button>
@@ -288,7 +293,11 @@
 </template>
 
 <script>
+import generatePassword from '@/components/InfoAdmin/GeneratePassword'
 export default {
+  components: {
+    generatePassword
+  },
   data() {
     return {
       addStudent: {
